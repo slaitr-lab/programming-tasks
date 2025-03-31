@@ -1,10 +1,13 @@
+import os
+
+circle_file_path = os.path.join('D:\\', 'my_tests', 'test2', 'circle.txt')
+points_file_path = os.path.join('D:\\', 'my_tests', 'test2', 'points.txt')
 try:
-    with open('D:\my_tests\\test2\circle.txt', 'r', encoding='utf-8') as f:
-        centr_x = float(f.readline().strip())
-        centr_y = float(f.readline().strip())
+    with open(circle_file_path, 'r', encoding='utf-8') as f:
+        centr_x, centr_y = map(float, f.readline().strip().split())
         radius = float(f.readline().strip())
 
-    with open('D:\my_tests\\test2\points.txt', 'r', encoding='utf-8') as p:
+    with open(points_file_path, 'r', encoding='utf-8') as p:
         points = [tuple(map(float, l.strip().split())) for l in p]
 
     answer = []

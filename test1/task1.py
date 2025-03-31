@@ -1,5 +1,7 @@
-# Инициализация переменных
-n, m = int(input()), int(input())
+import sys
+
+n = int(sys.argv[1])
+m = int(sys.argv[2])
 path = []
 start_indx = 0
 arg = list(range(1, n + 1))

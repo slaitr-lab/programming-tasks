@@ -1,4 +1,8 @@
-with open('D:\my_tests\\test4\\random_numbers.txt', 'r', encoding='utf-8') as r:
+import os
+
+random_numbers_path = os.path.join('D:\\', 'my_tests', 'test4', 'random_numbers.txt')
+
+with open(random_numbers_path, 'r', encoding='utf-8') as r:
     nums = [int(i.strip()) for i in r]
 
 def median(nums: list) -> float:
